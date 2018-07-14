@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <div calss="header-left">
+    <div class="header-left">
       <div class="iconfont back-icon">&#xe624;</div>
     </div>
     <div class="header-input">
