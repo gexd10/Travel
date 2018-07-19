@@ -1,6 +1,17 @@
 <template>
   <ul class="list">
-    <li class="item" v-for="item of letters" :key="item" @click="handleLetterClick" @touchstart="handleTouchStart" @touchmove="handleTouchMove" @touchend="handleTouchEnd" :ref="item">{{item}}</li>
+    <li
+      class="item"
+      v-for="item of letters"
+      :key="item"
+      :ref="item"
+      @touchstart.prevent="handleTouchStart"
+      @touchmove="handleTouchMove"
+      @touchend="handleTouchEnd"
+      @click="handleLetterClick"
+    >
+      {{item}}
+    </li>
   </ul>
 </template>
 
@@ -69,7 +80,7 @@ export default {
     bottom: 0
     width: .4rem
     .item
-      text-align: center
       line-height: .4rem
+      text-align: center
       color: $bgColor
 </style>
